@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.6.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group 'br.com.lucasaquiles'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile('org.axonframework:axon-spring-boot-starter:3.2')
+    compile('org.axonframework:axon-mongo:3.2')
+
+    testCompile('org.axonframework:axon-test:3.2')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+
+}
