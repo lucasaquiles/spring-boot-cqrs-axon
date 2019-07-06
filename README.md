@@ -1,1 +1,1 @@
-basic CQRS implementation using Axion and spring boot
+basic CQRS implementation using Axon and spring boot
