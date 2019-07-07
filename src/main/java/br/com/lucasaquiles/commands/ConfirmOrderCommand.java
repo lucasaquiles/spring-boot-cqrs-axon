@@ -1,7 +1,7 @@
 package br.com.lucasaquiles.commands;
 
 import lombok.RequiredArgsConstructor;
-import org.axonframework.commandhandling.TargetAggregateIdentifier;
+import org.axonframework.modelling.command.TargetAggregateIdentifier;
 
 @RequiredArgsConstructor
 public class ConfirmOrderCommand {

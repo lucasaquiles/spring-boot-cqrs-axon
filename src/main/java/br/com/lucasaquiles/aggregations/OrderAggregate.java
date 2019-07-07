@@ -6,22 +6,32 @@ import br.com.lucasaquiles.commands.ShipOrderCommand;
 import br.com.lucasaquiles.events.OrderConfirmedEvent;
 import br.com.lucasaquiles.events.OrderPlacedEvent;
 import br.com.lucasaquiles.events.OrderShippedEvent;
-import lombok.NoArgsConstructor;
+import lombok.Data;
 import org.axonframework.commandhandling.CommandHandler;
-import org.axonframework.commandhandling.model.AggregateIdentifier;
+
 import org.axonframework.eventsourcing.EventSourcingHandler;
+import org.axonframework.modelling.command.AggregateIdentifier;
 import org.axonframework.spring.stereotype.Aggregate;
 
-import static org.axonframework.commandhandling.model.AggregateLifecycle.apply;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import static org.axonframework.modelling.command.AggregateLifecycle.apply;
 
 
 @Aggregate
-@NoArgsConstructor
+@Data
+@Entity
 public class OrderAggregate {
 
     @AggregateIdentifier
+    @Id
     private String orderId;
     private boolean orderConfirmed;
+
+    public OrderAggregate(){
+
+    }
 
     @CommandHandler
     public OrderAggregate(PlaceOrderCommand command){
