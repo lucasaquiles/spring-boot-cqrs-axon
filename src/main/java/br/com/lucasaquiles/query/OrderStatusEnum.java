@@ -1,8 +1,6 @@
 package br.com.lucasaquiles.query;
 
-
 import lombok.Getter;
-
 
 @Getter
 public enum OrderStatusEnum {

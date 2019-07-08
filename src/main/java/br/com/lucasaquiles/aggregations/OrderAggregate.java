@@ -8,11 +8,9 @@ import br.com.lucasaquiles.events.OrderPlacedEvent;
 import br.com.lucasaquiles.events.OrderShippedEvent;
 import lombok.Data;
 import org.axonframework.commandhandling.CommandHandler;
-
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;
 import org.axonframework.spring.stereotype.Aggregate;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 

@@ -37,7 +37,7 @@ public class TestCommand {
     @Test
     public void testShipOrderNotConfirmed(){
         String orderId = UUID.randomUUID().toString();
-        String product = "Deluxe Chair";
+        String product = "violao";
         fixture.given(new OrderPlacedEvent(orderId, product))
                 .when(new ShipOrderCommand(orderId))
                 .expectException(IllegalStateException.class);
