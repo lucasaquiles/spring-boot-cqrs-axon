@@ -34,7 +34,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-actuator")
     compile('org.axonframework:axon-spring-boot-starter:4.0.3')
 
-    runtime('com.h2database:h2')
+    compile('com.h2database:h2')
 
 //    compile('org.axonframework:axon-mongo:3.2')
 
